@@ -9,7 +9,7 @@ const forecast = (lati, longi, callback) => {
     } else if (body.error) {
       callback('Unable to find coordnates. Try another search', undefined);
     } else {
-      callback(undefined, `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipProbability}% chance of rain. Today's Highs & Lows are ${body.daily.data[0].temperatureHigh} & ${body.daily.data[0].temperatureLow}`);
+      callback(undefined, `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. There is a ${body.currently.precipProbability}% chance of rain. Today's Highs & Lows are ${body.daily.data[0].temperatureHigh} & ${body.daily.data[0].temperatureLow}.`);
     };
   });
 };
